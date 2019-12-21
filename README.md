@@ -20,5 +20,5 @@
 5）管理员还可以实现已售车票的统计和查询、打印功能，可以月度、季度、年度财务结算等功能。
 
 ##技术方案
-采用SpringBoot+angular+mysql+nginx+redis实现
+采用javaWeb+mysql实现
 
