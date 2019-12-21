@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 
  * @ClassName: MemberLoginOutServlet
- * @Description: 会员 退出登陆
+ * @Description: 乘客 退出登陆
  * @author ljy
  * @date 2019年11月14日 下午3:37:12
  *

@@ -17,7 +17,7 @@ import com.cn.service.impl.TrainServiceImpl;
 /**
  * 
  * @ClassName: ChangePrepServlet
- * @Description: 会员 改签业务
+ * @Description: 乘客 改签业务
  * @author: ljy
  * @date: 2019年9月30日 下午5:53:36
  */

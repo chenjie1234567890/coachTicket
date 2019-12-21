@@ -15,7 +15,7 @@ import com.cn.service.impl.MemberServiceImpl;
 /**
  * 
  * @ClassName: UpdateMemberPasswordServlet 
- * @Description: 会员 修改密码
+ * @Description: 乘客 修改密码
  * @author: ljy
  * @date: 2019年9月30日 下午11:01:33
  */

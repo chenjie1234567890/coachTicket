@@ -76,6 +76,7 @@
 						<a style="text-decoration:none" class="ml-5" href="<%=basePath%>PayServlet?prepId=${prep.prepId}" title="付款"><i class="Hui-iconfont">&#xe71c;</i></a> 
 						<a style="text-decoration:none" class="ml-5" href="<%=basePath%>UpdatePrepServlet?temp=2&&prepId=${prep.prepId}" title="改签"><i class="Hui-iconfont">&#xe6df;</i></a> 
 						<a style="text-decoration:none" class="ml-5" href="<%=basePath%>DeletePrepServlet?prepId=${prep.prepId}" title="退票"><i class="Hui-iconfont">&#xe6e2;</i></a>
+						<a style="text-decoration:none" class="ml-5" href="<%=basePath%>GenerateTicketServlet" title="生成车票"><i class="Hui-iconfont">&#xe632;</i></a>
 					</td>
 				</tr>
 				</c:forEach>

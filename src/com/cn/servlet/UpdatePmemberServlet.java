@@ -15,7 +15,7 @@ import com.cn.service.impl.PmemberServiceImpl;
 /**
  * 
  * @ClassName: UpdatePmemberServlet 
- * @Description: 会员 修改会员个人信息
+ * @Description: 乘客 修改会员个人信息
  * @author: ljy
  * @date: 2019年9月30日 下午2:42:24
  */

@@ -381,6 +381,26 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>CountPrepServlet2</display-name>
+    <servlet-name>CountPrepServlet2</servlet-name>
+    <servlet-class>com.cn.servlet.CountPrepServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountPrepServlet2</servlet-name>
+    <url-pattern>/CountPrepServlet2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CountPrepServlet3</display-name>
+    <servlet-name>CountPrepServlet3</servlet-name>
+    <servlet-class>com.cn.servlet.CountPrepServlet3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountPrepServlet3</servlet-name>
+    <url-pattern>/CountPrepServlet3</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>GetAllAdminServlet</display-name>
     <servlet-name>GetAllAdminServlet</servlet-name>
     <servlet-class>com.cn.servlet.GetAllAdminServlet</servlet-class>
@@ -408,5 +428,15 @@
   <servlet-mapping>
     <servlet-name>ExportExcelServlet</servlet-name>
     <url-pattern>/ExportExcelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GenerateTicketServlet</display-name>
+    <servlet-name>GenerateTicketServlet</servlet-name>
+    <servlet-class>com.cn.servlet.GenerateTicketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GenerateTicketServlet</servlet-name>
+    <url-pattern>/GenerateTicketServlet</url-pattern>
   </servlet-mapping>
 </web-app>

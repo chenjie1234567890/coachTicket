@@ -14,7 +14,7 @@ import com.cn.service.impl.PrepServiceImpl;
 /**
  * 
  * @ClassName: UpdatePrepServlet 
- * @Description: 会员 判断是改签还是付款，如果是付款的话实现付款业务，改签的话跳转到ChangePrepServlet
+ * @Description: 乘客 判断是改签还是付款，如果是付款的话实现付款业务，改签的话跳转到ChangePrepServlet
  * @author: ljy
  * @date: 2019年11月10日 下午8:24:24
  */

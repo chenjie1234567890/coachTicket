@@ -11,7 +11,7 @@ import com.cn.domain.Member;
 /**
  * 
  * @ClassName: GetMyMemberServlet 
- * @Description: 会员 将member信息转发到我的中心界面
+ * @Description: 乘客 将member信息转发到我的中心界面
  * @author: ljy
  * @date: 2019年9月30日 下午10:17:33
  */
