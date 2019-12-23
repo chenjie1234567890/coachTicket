@@ -18,8 +18,6 @@ import com.cn.service.impl.TrainServiceImpl;
  * 
  * @ClassName: AddTrainServlet 
  * @Description: 添加车次的Servlet
- * @author: ljy
- * @date: 2019年9月11日 下午4:41:06
  */
 public class AddTrainServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

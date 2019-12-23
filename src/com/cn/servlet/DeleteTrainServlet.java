@@ -15,8 +15,6 @@ import com.cn.service.impl.TrainServiceImpl;
  * 
  * @ClassName: DeleteTrainServlet 
  * @Description: 管理员  删除车次
- * @author: ljy
- * @date: 2019年11月18日 下午11:38:41
  */
 public class DeleteTrainServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

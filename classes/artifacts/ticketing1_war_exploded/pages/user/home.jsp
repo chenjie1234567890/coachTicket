@@ -44,7 +44,5 @@
 	    
 	    <iframe name="my_iframe" id="my_iframe" src="<%=basePath%>GetByStartEndStationServlet" width="60%" height="800px" seamless="seamless"></iframe>
 	    <!-- 首页顶部导航栏end  -->
-	    
-	    
 
 </html>

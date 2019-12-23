@@ -16,8 +16,6 @@ import com.cn.service.impl.PrepServiceImpl;
  * 
  * @ClassName: PayServlet
  * @Description: 用户付款
- * @author: ljy
- * @date: 2019年9月28日 下午10:38:37
  */
 public class PayServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

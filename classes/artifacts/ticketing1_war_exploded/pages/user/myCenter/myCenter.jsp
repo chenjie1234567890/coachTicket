@@ -32,7 +32,7 @@
 <body>
 <header class="navbar-wrapper">
 	<div class="navbar navbar-fixed-top">
-		<div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="<%=basePath%>pages/user/myCenter/myCenter.jsp">会员中心 </a> 
+		<div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="<%=basePath%>pages/user/myCenter/myCenter.jsp">乘客中心 </a>
 			<span class="logo navbar-slogan f-l mr-10 hidden-xs">v1.0</span> 
 			<a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
 			

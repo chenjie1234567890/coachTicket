@@ -26,8 +26,6 @@ import com.cn.service.impl.TrainServiceImpl;
  * 
  * @ClassName: BookingServlet 
  * @Description: 乘客  实现订票功能的Servlet
- * @author: ljy
- * @date: 2019年9月17日 下午11:23:41
  */
 public class BookingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
