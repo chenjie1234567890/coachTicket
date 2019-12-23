@@ -35,7 +35,7 @@ public class ChangePrepServlet extends HttpServlet {
 		TrainService trainService = new TrainServiceImpl();
 		// 将订单信息中的trainID先拉取出来，下面更改车次座位数需要
 		Integer trainId = prepService.getById(prepId).getTrainId();
-		
+
 		// 删除这个订单
 		int recordNumber = 0;
 		recordNumber = prepService.delete(prepId);
@@ -58,6 +58,4 @@ public class ChangePrepServlet extends HttpServlet {
 					"window.location.href='MyPrepServlet'</script>");
 		}
 	}
-
-
 }

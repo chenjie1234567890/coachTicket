@@ -41,6 +41,7 @@ public class GetByStartEndStationServlet extends HttpServlet {
 		 */
 		TrainService trainService = new TrainServiceImpl();
 		List<Train> startStationList = trainService.getAllStartStation();
+		String endStation = request.getParameter("endStation");
 		if(startStationList != null) {
 			request.setAttribute("startStationList", startStationList);
 		}else {
@@ -105,7 +106,12 @@ public class GetByStartEndStationServlet extends HttpServlet {
 		List<Train> list = trainService.getByStartEndStation(startStation, endStation, startTime);
 		
 		PrintWriter out = response.getWriter();
-		
+
+		// 设置搜索条件
+		request.setAttribute("selectStartStation", startStation);
+		request.setAttribute("selectEndStation", endStation);
+		request.setAttribute("selectStartTime", startTime);
+
 		// 判断是否查询到车次
 		if(list!=null && list.size()>0) {
 			// 查到了，将结果转发到界面

@@ -25,7 +25,6 @@
 </head>
 <body onload="getDate()">
 
-	
 	<br/><br/>
 	<form action="<%=basePath%>GetByStartEndStationServlet" method="post">
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -33,6 +32,7 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		起始站:&nbsp;&nbsp;
 		<select name="startStation">
+			<option value="${selectStartStation}" selected>${selectStartStation}</option>
 			<c:forEach items="${startStationList}" var="train">
 				<option value="${train.startStation}">${train.startStation}</option>
 			</c:forEach>
@@ -40,13 +40,14 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		终点站:&nbsp;&nbsp;
 		<select name="endStation">
+			<option value="${selectEndStation}">${selectEndStation}</option>
 			<c:forEach items="${endStationList}" var="train">
 				<option value="${train.endStation}">${train.endStation}</option>
 			</c:forEach>
 		</select>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		开车时间:&nbsp;&nbsp;
-		<input type="date" id="startTime" id="startTime" name="startTime" min=""/>
+		<input type="date" id="startTime" id="startTime" name="startTime" min="" value="${selectStartTime}"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<input class="sumbit-button" type="submit" value="查询">
 	</form>
