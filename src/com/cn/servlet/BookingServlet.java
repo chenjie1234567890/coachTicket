@@ -105,16 +105,16 @@ public class BookingServlet extends HttpServlet {
 				// prepId这是从UpdatePrepServlet过来的，实现改签业务，
 				Integer prepId = (Integer) session.getAttribute("changePrepId");
 
-				// 将订单信息中的trainID先拉取出来，下面更改车次座位数需要
-				Integer changeTrainId = prepService.getById(prepId).getTrainId();
+				// 获取改签前车次id
+				Integer changeTrainId = (Integer) session.getAttribute("changeTrainId");
 
 				// 删除订单
 				prepService.delete(prepId);
 
 				// 座位数+1
 				Train changeTrain = trainService.getById(changeTrainId);
-				train.setSeatNumber(train.getSeatNumber() + 1);
-				trainService.update(train);
+				changeTrain.setSeatNumber(changeTrain.getSeatNumber() + 1);
+				trainService.update(changeTrain);
 				
 				// 修改session，表示改签结束
 				session.setAttribute("changePrep", "false");

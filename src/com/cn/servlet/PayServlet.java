@@ -67,9 +67,7 @@ public class PayServlet extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 		if(recordNumber == 1) {
-			out.write("<script>alert('付款成功！');" +
-					"window.location.href='MyPrepServlet'</script>");
-			out.write("<script>alert('已发送车票到手机，请注意查收！');" +
+			out.write("<script>alert('付款成功！已发送车票到手机，请注意查收！');" +
 					"window.location.href='MyPrepServlet'</script>");
 		} else {
 			out.write("<script>alert('很抱歉,付款失败！');" +

@@ -47,6 +47,7 @@ public class ChangePrepServlet extends HttpServlet {
         // 将改签开始的信息存到session，告知BookingServlet这是改签
         request.getSession().setAttribute("changePrep", "true");
         request.getSession().setAttribute("changePrepId", prepId);
+        request.getSession().setAttribute("changeTrainId", trainId);
 
         PrintWriter out = response.getWriter();
         // 跳转

@@ -80,7 +80,11 @@
 				<td>${allTrain.endTime}</td>
 				<td>${allTrain.price}</td>
 				<td>${allTrain.seatNumber}</td>
-				<td><a href="<%=basePath%>CheckLoginServlet?trainId=${allTrain.trainId}&temp=2">订票</a></td>
+				<td>
+					<c:if test="${allTrain.seatNumber > 0}">
+						<a href="<%=basePath%>CheckLoginServlet?trainId=${allTrain.trainId}&temp=2">订票</a>
+					</c:if>
+				</td>
 			</tr>
 			</c:forEach>
 			</tbody>
