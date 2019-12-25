@@ -30,8 +30,18 @@ public class PrepDaoImpl implements PrepDao {
 	public int add(Prep prep) throws SQLException {
 		conn = JDBCUtil.getConnection();
 		queryRunner = new QueryRunner();
-		int recordNumber = queryRunner.update(conn, "insert into prep (trainid,pmemberid,startstation,endstation,trainnumber,starttime,endtime,price,way,booktime) values (?,?,?,?,?,?,?,?,?,?)",
-				prep.getTrainId(),prep.getPmemberId(),prep.getStartStation(),prep.getEndStation(),prep.getTrainNumber(),prep.getStartTime(),prep.getEndTime(),prep.getPrice(),prep.isWay(),prep.getBooktime());
+		int recordNumber = queryRunner.update(conn, "insert into prep (trainid,pmemberid,startstation,endstation,trainnumber,starttime,endtime,price,way,booktime, back) values (?,?,?,?,?,?,?,?,?,?,?)",
+				prep.getTrainId(),
+				prep.getPmemberId(),
+				prep.getStartStation(),
+				prep.getEndStation(),
+				prep.getTrainNumber(),
+				prep.getStartTime(),
+				prep.getEndTime(),
+				prep.getPrice(),
+				prep.isWay(),
+				prep.getBooktime(),
+				prep.isBack());
 		DbUtils.close(conn);
 		return recordNumber;
 	}
@@ -49,8 +59,18 @@ public class PrepDaoImpl implements PrepDao {
 	public int update(Prep prep) throws SQLException {
 		conn = JDBCUtil.getConnection();
 		queryRunner = new QueryRunner();
-		int recordNumber = queryRunner.update(conn, "update prep set trainid=?,pmemberid=?,startstation=?,endstation=?,trainnumber=?,starttime=?,endtime=?,price=?,way=? where prepid=?", 
-				prep.getTrainId(),prep.getPmemberId(),prep.getStartStation(),prep.getEndStation(),prep.getTrainNumber(),prep.getStartTime(),prep.getEndTime(),prep.getPrice(),prep.isWay(),prep.getPrepId());
+		int recordNumber = queryRunner.update(conn, "update prep set trainid=?,pmemberid=?,startstation=?,endstation=?,trainnumber=?,starttime=?,endtime=?,price=?,way=?,back=? where prepid=?",
+				prep.getTrainId(),
+				prep.getPmemberId(),
+				prep.getStartStation(),
+				prep.getEndStation(),
+				prep.getTrainNumber(),
+				prep.getStartTime(),
+				prep.getEndTime(),
+				prep.getPrice(),
+				prep.isWay(),
+				prep.isBack(),
+				prep.getPrepId());
 		DbUtils.close(conn);
 		return recordNumber;
 	}

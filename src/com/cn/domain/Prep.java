@@ -22,6 +22,7 @@ public class Prep {
 	private Integer price;		//车票价格
 	private boolean way;		//付款情况
 	private Timestamp booktime;	//订票时间
+	private boolean back;		// 是否可退票
 	public Integer getPrepId() {
 		return prepId;
 	}
@@ -88,13 +89,21 @@ public class Prep {
 	public void setBooktime(Timestamp booktime) {
 		this.booktime = booktime;
 	}
-	
+
+	public boolean isBack() {
+		return back;
+	}
+
+	public void setBack(boolean back) {
+		this.back = back;
+	}
+
 	@Override
 	public String toString() {
 		return "Prep [prepId=" + prepId + ", trainId=" + trainId + ", pmemberId=" + pmemberId + ", startStation="
 				+ startStation + ", endStation=" + endStation + ", trainNumber=" + trainNumber + ", startTime="
 				+ startTime + ", endTime=" + endTime + ", price=" + price + ", way=" + way + ", booktime=" + booktime
-				+ "]";
+				+ "back=" + back + "]";
 	}
 	
 	

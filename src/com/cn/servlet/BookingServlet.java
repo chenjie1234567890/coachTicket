@@ -48,8 +48,10 @@ public class BookingServlet extends HttpServlet {
 			Pmember pmember = pmemberService.getPmemberByMemberId(memberId);
 			
 			// 将数据转发到界面
+			boolean back = true;
 			request.setAttribute("train", train);
 			request.setAttribute("pmember", pmember);
+			request.setAttribute("back", back);
 			request.getRequestDispatcher("pages/user/booking.jsp").forward(request, response);
 
 	}
@@ -71,7 +73,10 @@ public class BookingServlet extends HttpServlet {
 		Integer memberId = member.getMemberId();;	
 		PmemberService pmemberService = new PmemberServiceImpl();
 		Pmember pmember = pmemberService.getPmemberByMemberId(memberId);
-		
+
+		// 获取是否可退票
+		boolean back = Boolean.valueOf(request.getParameter("back"));
+
 		Prep prep = new Prep();
 		prep.setTrainId(train.getTrainId());
 		prep.setPmemberId(pmember.getPmemberId());
@@ -80,7 +85,8 @@ public class BookingServlet extends HttpServlet {
 		prep.setTrainNumber(train.getTrainNumber());
 		prep.setStartTime(train.getStartTime());
 		prep.setEndTime(train.getEndTime());
-		prep.setPrice(train.getPrice());
+		prep.setPrice(back?train.getPrice():train.getPrice() - 5);
+		prep.setBack(back);
 		prep.setWay(false);
 
 //		Long time = new java.util.Date().getTime();
